@@ -1,0 +1,13 @@
+{
+  "name": "@iamsap/user-simulator",
+  "version": "0.0.0",
+  "description": "A framework for creating simulated users and generating configurable behavior.",
+  "main": "build/index.js",
+  "scripts": {
+  },
+  "author": "robbymillsap@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "sillyname": "^0.1.0"
+  }
+}
