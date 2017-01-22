@@ -29,4 +29,6 @@ sim.simulate(config, function onComplete(err, results) {
 
 ````
 
-User names are generated using @sillynames
+User names are generated using @sillynames.
+
+Actions do not run concurrently (yet).  

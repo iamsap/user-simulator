@@ -1,6 +1,6 @@
 {
   "name": "@iamsap/user-simulator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A framework for creating simulated users and generating configurable behavior.",
   "main": "lib/simulator.js",
   "scripts": {
