@@ -25,7 +25,9 @@ var config = {
     debug:true
 }
 
-sim.simulate(config);
+sim.simulate(config, function onComplete(err, results){
+    console.log('All done: ' + JSON.stringify(results));
+});
 
 ````
 
