@@ -5,27 +5,25 @@ Simulates configurable user behavior.
 ```javascript
 var sim = require('@iamsap/user-simulator');
 
-function doThisRandomThing(user, cb){
+var doThisRandomThing = function doThisRandomThing(user, cb) {
     // ... some action
-    console.log(`User ${user.name} didThisRandomThing`);
-    cb(null, 'all done');
+    cb(null, user.name + ' didThisRandomThing ' + new Date());
 }
 
-function doAnotherRandomThing(user, cb){
+var doAnotherRandomThing = function doAnotherRandomThing(user, cb) {
     // ... some action
-    console.log(`User ${user.name} didAnotherRandomThing`);
-    cb(null, 'all done');
+    cb(null, user.name + '" didAnotherRandomThing ' + new Date());
 }
 
 var config = {
     actions: [doThisRandomThing, doAnotherRandomThing],
     userCount: 10,
-    timeBetweenActions: [5000,15000],
-    actionsPerUser: [1,5],
-    debug:true
+    timeBetweenActions: [1000, 5000],
+    actionsPerUser: [1, 5],
+    debug: true
 }
 
-sim.simulate(config, function onComplete(err, results){
+sim.simulate(config, function onComplete(err, results) {
     console.log('All done: ' + JSON.stringify(results));
 });
 
