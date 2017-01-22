@@ -19,9 +19,10 @@ function doAnotherRandomThing(user, cb){
 
 var config = {
     actions: [doThisRandomThing, doAnotherRandomThing],
-    users: 100,
+    userCount: 10,
     timeBetweenActions: [5000,15000],
-    actionsPerUser: [1,5]
+    actionsPerUser: [1,5],
+    debug:true
 }
 
 sim.simulate(config);
