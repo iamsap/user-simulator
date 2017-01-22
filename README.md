@@ -3,14 +3,18 @@
 Simulates configurable user behavior.
 
 ```javascript
-var sim = require('user-simulator');
+var sim = require('@iamsap/user-simulator');
 
-function doThisRandomThing(user){
+function doThisRandomThing(user, cb){
     // ... some action
+    console.log(`User ${user.name} didThisRandomThing`);
+    cb(null, 'all done');
 }
 
-function doAnotherRandomThing(user){
+function doAnotherRandomThing(user, cb){
     // ... some action
+    console.log(`User ${user.name} didAnotherRandomThing`);
+    cb(null, 'all done');
 }
 
 var config = {
@@ -20,7 +24,7 @@ var config = {
     actionsPerUser: [1,5]
 }
 
-sim.simulate(100, []);
+sim.simulate(config);
 
 ````
 
